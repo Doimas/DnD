@@ -34,7 +34,7 @@
 			<p class="indent"><strong><em>Size.</em></strong> Insurance salesmen are usually between 2.5 and 4 meters tall. Their average weight is around 16 kg. Your size is Large.</p>
 			<p class="indent"><strong><em>Speed.</em></strong> Your base walking speed is 20 feet.</p>
 			<p class="indent"><strong><em>Nearsighted.</em></strong> Used to reading long contracts with a lot of fine print, insurance salesmen have exceptional eyesight at close range, able to easily discern details that most others might miss. However, at longer range, their eyesight is extremely poor and anything more than 3 meters away is little more than a blur. </p>
-			<p class="indent"><strong><em>Strong blood, weak lungs.</em></strong> </p> You are resistant to most bloodborne toxins and substances like alchohol do not affect you. However, you have a disadvantage to saving throws against airborne toxins. 
+			<p class="indent"><strong><em>Strong blood, weak lungs.</em></strong> You are resistant to most bloodborne toxins and substances like alchohol do not affect you. However, you have a disadvantage to saving throws against airborne toxins. </p>
 			<p class="indent"><strong><em>Tool Proficiency.</em></strong> You gain proficiency with Calligrapher's or Cartographer's tools.</p>
 			<p class="indent"><strong><em>Languages.</em></strong> You can speak, read, and write Common.</p>
 		</description>
@@ -49,12 +49,12 @@
 			<stat name="intelligence" value="2" />
 			<stat name="innate speed" value="20" bonus="base" />
 			<grant type="Size" id="ID_SIZE_LARGE" />
-			<grant type="Vision" id="" />
 			<grant type="Language" id="ID_LANGUAGE_COMMON" />
 			<grant type="Racial Trait" id="ID_RACIAL_TRAIT_STRONG_BLOOD" />
 			<grant type="Racial Trait" id="ID_RACIAL_TRAIT_NEARSIGHTED" />
 			<grant type="Racial Trait" id="ID_RACIAL_TRAIT_INSURANCE_TOOL_PROFICIENCY" />
 			<grant type="Racial Trait" id="ID_RACIAL_TRAIT_INSURLANGUAGE" />
+			<grant type="Racial Trait" id="ID_RACIAL_TRAIT_MULTIJOINTED" />
 		</rules>
 	</element>
 	<element name="Strong Blood, Weak Lungs" type="Racial Trait" source="Player’s Handbook" id="ID_RACIAL_TRAIT_STRONG_BLOOD">
@@ -92,7 +92,17 @@
 			<p>Whenever you propose the selling of insurance to another person, you automatically speak in their primary spoken language. This effect lasts until an insurance deal is sucesfully made or definitively rejected. You have no conscious control over this ability.</p>
 		</description>
 		<sheet>
-			<description>Speak any language automatically while selling insurance. Does not aply to non-verbal languages. </description>
+			<description>Speak any language automatically while selling insurance. Does not aply to non-verbal languages such as sign language or telepathy. The effects lats until a deal is made/rejected and stops if the conversation veers too far away from the insurance deal in question.</description>
+		</sheet>
+		<rules>
+		</rules>
+	</element>
+	<element name="Multijointed" type="Racial Trait" source="Player’s Handbook" id="ID_RACIAL_TRAIT_MULTIJOINTED">
+		<description>
+			<p>The arms, legs and neck of Insurance Salesmen have a multitude of joints, not unlike tails of certain other races. They usually use just one joint - the equalivalent of an elbow/knee - so as to appear more 'normal'. However, when needed, they can contort their limbs into unnatural positions and can effectively decrease their overall size.</p>
+		</description>
+		<sheet>
+			<description>You can change your size from Large to Medium, Small or Tiny by contorting your limbs. In battle, this action takes one turn to perform. You can enter spaces that are as tight as 1m by 1m in this form. Your movement penatly is double the normal movement penalty for these sizes.</description>
 		</sheet>
 		<rules>
 		</rules>
