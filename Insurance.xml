@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<elements>
+	<info>
+		<name>Insurance Salesman</name>
+		<author url="http://dnd.wizards.com/products/tabletop-games/rpg-products/rpg_playershandbook">Wizards of the Coast</author>
+		<update version="0.2.8">
+			<file name="insurance.xml" url="" />
+		</update>
+	</info>
+
+	<element name="Insurance Salesman" type="Race" source="Me" id="ID_HMBRW_RACE_INSURANCE">
+		<description>
+			<p class="flavor">No one knows exactly where they come from or why, not even themselves, but everyone knows one thing - they sell insurance. It's just what they do.</p>
+			<h4>LARGE AND SQUISHY</h4>
+			<p>Insurance salesmen are large in stature but lanky and their limbs have many small joints, so they can reduce their size by contorting them, and thez are rather weak.</p>
+			<p class="indent">Most insurance salesmen have skin that is in different shades of brown, sometimes resembling tree bark, but it is soft to the touch. Older individuals will develop white cracks in their skin. They have no hair to speak of.</p>
+			<h4>CARPE DIEM</h4>
+			<p>Since they are a rather short-lived race - most don't live past 7 years old - most insurance salesmen live for the moment. They let bygones be bygones and do not concern themselves with planning for the future.</p>
+			<p class="indent">Most are rather impulsive by nature and might be seen as frivolous, reckless or insensitive by other races. They are not too good at remembering important dates or events.</p>
+			<p class="indent"></p>
+			<h4>SOCIETY</h4>
+			<p>Insurance salesmen have no organized society to speak of. Most just live individually, selling insurance as they go. If they meet another member of their race, they might share some time together but, by necessety, they do see eachother as competition.</p>
+			<p class="indent">The most important sign of seniority and status in the limited society they have is the number of insurance contracts sold. It is more important than age or any other factor. Reaching 108 contracts sold is considered to be a sort of rite of passage. No one knows why that number is significant as that info has been lost to time.</p>
+			<p class="indent">Insurance salesman usually do not occupy any professions, but if they do they will usually be employed as a sort of legal cousel, since they are well-wersed in legalese.
+			</p>
+			<h4>SELLING INSURANCE FAR AND WIDE</h4>
+			<p>Insurance Salesmen who go out adventuring usually do so because they've exhausted all opportunities to sell insurance in the area where they were 'born'.</p>
+			<h4>INSURANCE SALESMAN NAMES</h4>
+			<p>Most Insurance Salesmen don't have a name. Those that do, usually choose one for themselves based on something they are fond of, or something they think will help them sell more insurance.</p>
+			<ul class="unstyled" </p>			
+			<p class="indent"><strong><em>Ability Score Increase.</em></strong> Your Intelligence score increases by 2.</p>
+			<p class="indent"><strong><em>Age.</em></strong> Insurance salesmen come into the world fully formed, ready to sell insurance. The first memory of each one is waking up, and going out to sell insurance. They live to be 7 to 8 years old at most.</p>
+			<p class="indent"><strong><em>Alignment.</em></strong> Insurance salesmen don't care much about worldly affairs and morality in general - only about selling insurance, which is what most if not all of their actions are guided by. Sometimes this might align with what others would consider moral and sometimes it might not. They are generally neutral by nature as a result.</p>
+			<p class="indent"><strong><em>Size.</em></strong> Insurance salesmen are usually between 2.5 and 4 meters tall. Their average weight is around 16 kg. Your size is Large.</p>
+			<p class="indent"><strong><em>Speed.</em></strong> Your base walking speed is 20 feet.</p>
+			<p class="indent"><strong><em>Nearsighted.</em></strong> Used to reading long contracts with a lot of fine print, insurance salesmen have exceptional eyesight at close range, able to easily discern details that most others might miss. However, at longer range, their eyesight is extremely poor and anything more than 3 meters away is little more than a blur. </p>
+			<p class="indent"><strong><em>Strong blood, weak lungs.</em></strong> </p> You are resistant to most bloodborne toxins and substances like alchohol do not affect you. However, you have a disadvantage to saving throws against airborne toxins. 
+			<p class="indent"><strong><em>Tool Proficiency.</em></strong> You gain proficiency with Calligrapher's or Cartographer's tools.</p>
+			<p class="indent"><strong><em>Languages.</em></strong> You can speak, read, and write Common.</p>
+		</description>
+		<sheet display="false" />
+		<setters>
+			<set name="names" type="male"></set>
+			<set name="names" type="female"></set>
+			<set name="names" type="clan"></set>
+			<set name="names-format">{{name}} {{clan}}</set>
+		</setters>
+		<rules>
+			<stat name="intelligence" value="2" />
+			<stat name="innate speed" value="20" bonus="base" />
+			<grant type="Size" id="ID_SIZE_LARGE" />
+			<grant type="Vision" id="" />
+			<grant type="Language" id="ID_LANGUAGE_COMMON" />
+			<grant type="Racial Trait" id="ID_RACIAL_TRAIT_STRONG_BLOOD" />
+			<grant type="Racial Trait" id="ID_RACIAL_TRAIT_NEARSIGHTED" />
+			<grant type="Racial Trait" id="ID_RACIAL_TRAIT_INSURANCE_TOOL_PROFICIENCY" />
+			<grant type="Racial Trait" id="ID_RACIAL_TRAIT_INSURLANGUAGE" />
+		</rules>
+	</element>
+	<element name="Strong Blood, Weak Lungs" type="Racial Trait" source="Player’s Handbook" id="ID_RACIAL_TRAIT_STRONG_BLOOD">
+		<description>
+			<p>You have advantage on saving throws against bloodborne toxins, and resistance against their damage, but a disadvantage on saving throws against airborne toxins.</p>
+		</description>
+		<sheet>
+			<description>You have advantage on saving throws against bloodborne toxins, and resistance against their damage, but a disadvantage on saving throws against airborne toxins.</description>
+		</sheet>
+		<rules>
+			<grant type="Condition" id="ID_INTERNAL_CONDITION_DAMAGE_RESISTANCE_POISON" />
+		</rules>
+	</element>
+	<element name="Nearsighted" type="Racial Trait" source="Player’s Handbook" id="ID_RACIAL_TRAIT_NEARSIGHTED">
+		<description>
+			<p>Used to reading long contracts with a lot of fine print, insurance salesmen have exceptional eyesight at close range, able to easily discern details that most others might miss. However, at longer range, their eyesight is extremely poor and anything more than 3 meters away is little more than a blur.</p>
+		</description>
+		<sheet>
+			<description>You have a perception check advantage to anything within 1m when using sight, and a disadvantage on anything beyond 3m.</description>
+		</sheet>
+		<rules>
+		</rules>
+	</element>
+	<element name="Tool Proficiency" type="Racial Trait" source="Player’s Handbook" id="ID_RACIAL_TRAIT_INSURANCE_TOOL_PROFICIENCY">
+		<description>
+			<p>You gain proficiency with either Calligraphers or Cartographers tools.</p>
+		</description>
+		<sheet display="true"/>
+		<rules>
+			<select type="Proficiency" name="Tool Proficiency" supports="ID_PROFICIENCY_TOOL_PROFICIENCY_CALLIGRAPHERS_TOOLS|ID_PROFICIENCY_TOOL_PROFICIENCY_CARTOGRAPHERS_TOOLS" />
+		</rules>
+	</element>
+	<element name="Insurance is the Universal Language" type="Racial Trait" source="Player’s Handbook" id="ID_RACIAL_TRAIT_INSURLANGUAGE">
+		<description>
+			<p>Whenever you propose the selling of insurance to another person, you automatically speak in their primary spoken language. This effect lasts until an insurance deal is sucesfully made or definitively rejected. You have no conscious control over this ability.</p>
+		</description>
+		<sheet>
+			<description>Speak any language automatically while selling insurance. Does not aply to non-verbal languages. </description>
+		</sheet>
+		<rules>
+		</rules>
+	</element>
+</elements>
