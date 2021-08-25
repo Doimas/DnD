@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<elements>
+	<info>
+        <name>Salesman</name>
+		<update version="0.0.2">
+			<file name="salesman.xml" url="" />
+		</update>
+	</info>
+    <element name="Salesman" type="Background" source="Me" id="ID_HMBRW_BACKGROUND_SALESMAN">
+		<description>
+			<p>Sure, accidents happen. But they seem to happen an awful lot when Acquisitions Incorporated operatives are on the scene. Naturally, nothing ever happens when there are no witnesses left behind. But sometimes one casualty is left a little less than dead, just waiting to discover what a lucky break that accident actually was.</p>
+			<p class="indent">You were a victim of a legal incident that was ostensibly the fault of Acquisitions Incorporated. At least that’s what the local magistrate said. But before a final ruling could be handed down. Acquisitions Incorporated offered you a job! Don’t know how to swing a sword? They promised to teach you! Think you have what it takes to sling spells? They’ve got masters who’ll have you throwing fire in no time!</p>
+			<p class="indent">With the promise of untold treasures and realms of magic and mystery just a dungeon away, you left your old life behind. Now a world of adventure is yours. Just initial here and sign here and here. Absolve Acq Inc of all former claims, and acknowledge you understand past outcomes don’t guarantee future results.</p>
+			<ul class="unstyled">
+				<li><strong>Skill Proficiencies:</strong> Insight, Persuasion</li>
+				<li><strong>Tool Proficiencies:</strong> One type of artisan’s tools</li>
+				<li><strong>Languages:</strong> Any one of your choice</li>
+				<li><strong>Equipment:</strong> One set of artisan’s tools, 20 gp</li>
+			</ul>
+			<div element="ID_WOTC_ACQINC_BACKGROUND_FEATURE_LEGALESE" />
+			<h5>SUGGESTED CHARACTERISTICS</h5>
+			<p>Salesmen can be lowly street vendors and urchins who scam their customers or esteemed jewlers selling only to the nobility - there are no rules. The only thing that's sure is - they love their job and the art of the deal.</p>
+		</description>
+		<setters>
+			<set name="short">Insight, Persuasion, Artisan’s Tool, Language</set>
+		</setters>
+		<rules>
+			<grant type="Proficiency" id="ID_PROFICIENCY_SKILL_INSIGHT" />
+			<grant type="Proficiency" id="ID_PROFICIENCY_SKILL_PERSUASION" />
+			<select type="Proficiency" name="Artisan’s Tool, Plaintiff" supports="Artisan tools" />
+			<select type="Language" name="Language, Plaintiff" supports="Standard" />
+			<grant type="Background Feature" id="ID_HMBRW_BACKGROUND_FEATURE_ART_OF_THE_DEAL" requirements="!ID_INTERNAL_GRANT_OPTIONAL_BACKGROUND_FEATURE"/>
+			<select type="Background Feature" name="Variant Feature" supports="Optional Background Feature" optional="true" />
+			<select type="List" name="Personality Trait" number="2">
+				<item id="1">I am going to sell my wares to anyone I can, whether they like it or not.</item>
+				<item id="2">I’ve been wronged my entire life, and the world owes me.</item>
+				<item id="3">If someone gets a bad deal with me, it's their fault for not reading the fine print.</item>
+				<item id="4">There is nothing I wouldn't be able to sell - but I'll always make sure it's a fair trade..</item>
+				<item id="5">I’m always in the wrong place at the wrong time.</item>
+				<item id="6">My superiors are smarter and wiser than I am. I do what I’m told.</item>
+				<item id="7">Never pass up the opportunity to make an easy bit of coin. That’s my motto.</item>
+				<item id="8">I’m beginning to feel like the gods are not on my side.</item>
+			</select>
+			<select type="List" name="Ideal">
+				<item id="1">Justice. Those who break the law need to answer for their crimes. (Lawful)</item>
+				<item id="2">Freedom. People must have the freedom to do what they want and pursue their dreams. (Chaotic)</item>
+				<item id="3">Greed. Everyone I see is getting theirs, so I’m surely going to get mine. (Evil)</item>
+				<item id="4">Chaos. You’re out of order! And you’re out of order! This whole realm is out of order! (Chaotic)</item>
+				<item id="5">Humility. I’m just a small part of a larger whole. So is everyone else. (Neutral)</item>
+				<item id="6">Responsibility. We all have our roles to play. I’ll hold up my end of the bargain. (Any)</item>
+			</select>
+			<select type="List" name="Bond">
+				<item id="1">Someone dangerous is after me since they think I gave them a bad deal.</item>
+				<item id="2">I have a rival that I strive to surpass in salescraft, by any means necessary.</item>
+				<item id="3">Deals are sacred to me - I would never go back on my word.</item>
+				<item id="4">Before I die, I'll make sure to achieve something no one has ever done.</item>
+				<item id="5">I made a sale that ruined someone's life and I want to make up for it.</item>
+				<item id="6">I love competition with others, but only if it's fair.</item>
+			</select>
+			<select type="List" name="Flaw">
+				<item id="1">Hurt feelings are only important if they're my feelings.</item>
+				<item id="2">'No' just means 'Yes, but later' - I just need to be persistent.</item>
+				<item id="3">I have only one vice, but it controls my life.</item>
+				<item id="4">Sleep is for the weak. We need to keep training more if we’re going to be ready for the challenges ahead.</item>
+				<item id="5">Until my songs are sung in every tavern in this realm, I won’t be satisfied.</item>
+				<item id="6">If people find me unpleasant, that’s their problem.</item>
+			</select>
+		</rules>
+	</element>
+	<element name="Feature: Art of the Deal" type="Background Feature" source="Me" id="ID_HMBRW_BACKGROUND_FEATURE_ART_OF_THE_DEAL">
+		<description>
+			<p>As a salesman you're well-aquinted with local laws and how contracts work. You always read the fine print and you are aware of legal loopholes you can exploit to get out of a sticky situation, or make a deal much sweeter for yourself. When negotiationg deals or legal matters, you can add your Intelligence bonus to the roll in additiona to your Charisma bonus.</p>
+		</description>
+		<sheet alt="Art of the Deal" />
+	</element>
+</elements>
