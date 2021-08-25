@@ -3,7 +3,7 @@
 	<info>
         <name>Salesman</name>
 		<update version="0.0.2">
-			<file name="salesman.xml" url="" />
+			<file name="salesman.xml" url="https://github.com/Doimas/DnD/blob/main/Salesman.xml" />
 		</update>
 	</info>
     <element name="Salesman" type="Background" source="Me" id="ID_HMBRW_BACKGROUND_SALESMAN">
