@@ -84,7 +84,7 @@
 		</description>
 		<sheet display="true"/>
 		<rules>
-			<select type="Proficiency" name="Tool Proficiency" supports="ID_PROFICIENCY_TOOL_PROFICIENCY_CALLIGRAPHERS_TOOLS|ID_PROFICIENCY_TOOL_PROFICIENCY_CARTOGRAPHERS_TOOLS" />
+			<select type="Proficiency" name="Tool Proficiency" supports="ID_PROFICIENCY_TOOL_PROFICIENCY_THIEVES_TOOLS" />
 		</rules>
 	</element>
 	<element name="Insurance is the Universal Language" type="Racial Trait" source="Player’s Handbook" id="ID_RACIAL_TRAIT_INSURLANGUAGE">
